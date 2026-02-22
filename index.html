@@ -2,76 +2,129 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Cuidado de Gatos - Semana 2</title>
+    <title>Cuidado de Gatos - Semana 3</title>
     
     <style>
-        /* 1. SELECTORES: Cambiando fondo y color de texto */
         body {
-            background-color: #f0f4f8; /* Color de fondo suave */
-            color: #2d3748; /* Color de texto general */
-            margin: 30px;
+            background-color: #fdfaf6;
+            color: #333;
+            margin: 40px;
+            /* 3. Propiedades de texto CSS: Interlineado y alineación */
+            line-height: 1.8; 
+            text-align: justify;
         }
 
-        header {
-            background-color: #4a5568; /* Fondo oscuro para el header */
-            color: #ffffff; /* Texto blanco */
-            padding: 20px;
+        h1 {
+            text-align: center;
+            /* 3. Sombreado y subrayado de texto */
+            text-shadow: 2px 2px #d1d1d1;
+            text-decoration: underline wavy #e67e22;
+            word-spacing: 5px; /* Separación entre palabras */
+        }
+
+        /* 1. Estilo para la Tabla con CSS */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
             text-align: center;
         }
 
-        /* 2. CLASES (.): Modificando tamaños de texto */
-        .texto-grande {
-            font-size: 22px;
+        th {
+            background-color: #e67e22;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Color intercalado para las filas */
+        }
+
+        /* Estilo para los vínculos */
+        a {
+            color: #2980b9;
+            text-decoration: none;
             font-weight: bold;
         }
 
-        .texto-pequeno {
-            font-size: 12px;
-            color: #718096;
+        a:hover {
+            text-decoration: underline;
+            color: #e67e22;
         }
 
-        /* 3. IDs (#): Modificando el tipo de letra */
-        #titulo-principal {
-            font-family: 'Verdana', sans-serif;
-            text-transform: uppercase;
-        }
-
-        #seccion-especial {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 8px;
+        #seccion-fotos {
+            margin-top: 50px;
+            padding: 20px;
+            border: 1px solid #ccc;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1 id="titulo-principal">Mundo Gatuno</h1>
+        <h1>Guía de Cuidados para Jacore y sus Amigos</h1>
     </header>
 
     <section>
-        <article>
-            <h2>Bienvenida</h2>
-            <p class="texto-grande">¡Hola! Soy Sofi y este es mi sitio sobre el cuidado de gatos adorables como mi Jacore.</p>
-            <p>En este espacio aprenderemos que cuidar un gato es una responsabilidad hermosa.</p>
-        </article>
-
-        <article id="seccion-especial">
-            <h2>Consejo Pro de la Semana</h2>
-            <p>Recuerda que los gatos necesitan rascadores para cuidar sus garritas y no dañar tus muebles.</p>
-        </article>
+        <h2>Menú de Navegación</h2>
+        <ul>
+            <li><a href="#tabla-cuidados">Ver Tabla de Cuidados</a> (Vínculo Interno)</li>
+            <li><a href="#seccion-fotos">Ir a mi Foto con Jacore</a> (Vínculo Interno)</li>
+            <li><a href="https://es.wikipedia.org/wiki/Felis_catus" target="_blank">Leer más sobre gatos en Wikipedia</a> (Vínculo Externo)</li>
+        </ul>
 
         <article>
-            <h2>Mi foto con mis gatos</h2>
+            <p>El cuidado de los gatos requiere constancia. No solo es jugar, también es organizar sus rutinas de salud y alimentación.</p>
+        </article>
+
+        <h2 id="tabla-cuidados">Horario de Cuidados Diarios</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Actividad</th>
+                    <th>Frecuencia</th>
+                    <th>Importancia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Alimentación</td>
+                    <td>3 veces al día</td>
+                    <td>Alta</td>
+                </tr>
+                <tr>
+                    <td>Limpieza de arenero</td>
+                    <td>Diario</td>
+                    <td>Muy Alta</td>
+                </tr>
+                <tr>
+                    <td>Cepillado de pelo</td>
+                    <td>2 veces por semana</td>
+                    <td>Media</td>
+                </tr>
+                <tr>
+                    <td>Juego con Jacore</td>
+                    <td>Mínimo 30 min</td>
+                    <td>Esencial</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div id="seccion-fotos">
+            <h2>Mi pasión por los felinos</h2>
             <img src="fotosofi.jpg" alt="Jacore y yo" style="width:100%; max-width:400px; border-radius:10px;">
-        </article>
+            <p><em>"Un gato es un rompecabezas para el cual no existe una solución".</em></p>
+        </div>
     </section>
 
     <footer>
-        <hr>
-        <p><strong>Autor:</strong> Sofia Alejandra Ocampo - Estudiante de tecnología grado 10°</p>
-        <p class="texto-pequeno">Contacto: alevu@gmail.com | Tarea Semana 2</p>
+        <p><strong>Autor:</strong> Esperanza - Estudiante de 10°</p>
+        <p>Contacto: esperanza.estudiante@ejemplo.com</p>
     </footer>
 
 </body>
