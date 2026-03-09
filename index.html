@@ -2,74 +2,108 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Mundo Minino - Proyecto de Aula</title>
+    <title>Mundo Minino - Proyecto Final Sofía</title>
     
     <style>
-        /* --- SEMANA 2 Y 4: SELECTORES, CLASES E IDs --- */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fdfaf6; /* Color de fondo suave */
-            color: #333;
-            margin: 0;
-            padding: 20px;
-            line-height: 1.6;
-        }
-
-        /* Agrupación de selectores ID y Clase (Punto 3 del taller) */
-        #titulo-principal, .subtitulo-seccion {
-            color: #2c3e50;
-            text-align: center;
-            text-decoration: underline dotted #e67e22;
-        }
-
-        /* Combinación de selectores y clases (Punto 2 del taller) */
-        article.destacado {
-            background-color: #ffffff;
-            border-left: 5px solid #e67e22;
-            padding: 15px;
-            margin: 20px 0;
-        }
-
-        /* --- SEMANA 4: MENÚ DE NAVEGACIÓN (Punto 1 del taller) --- */
-        nav {
-            background-color: #2c3e50;
-            width: 100%;
-            height: auto;
-            overflow: hidden;
-            border-radius: 8px;
-        }
-
-        nav ul {
-            list-style-type: none;
+        /* --- SEMANA 5: MODELO DE CAJA Y RESETEO (Punto 1a) --- */
+        * {
+            box-sizing: border-box; /* El padding no afecta el ancho total */
             margin: 0;
             padding: 0;
         }
 
-        nav ul li {
-            float: left; /* Propiedad float solicitada */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #fdfaf6; /* Color de fondo suave (Semana 2) */
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        /* --- SEMANA 5: POSICIONAMIENTO DEL LAYOUT (Boceto) --- */
+        
+        /* HEADER (Semana 1 y 5) */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 5px solid #e67e22;
+            margin-bottom: 15px;
+        }
+
+        #titulo-principal {
+            text-transform: uppercase;
+            text-shadow: 2px 2px #000;
+            text-decoration: underline dotted #e67e22; /* Semana 3: Decoración */
+        }
+
+        /* NAV: Menú de Navegación (Semana 3 y 4) */
+        nav {
+            background-color: #34495e;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex; /* Alineación horizontal */
         }
 
         nav ul li a {
             display: block;
             color: white;
-            text-align: center;
-            padding: 14px 20px;
+            padding: 15px 25px;
             text-decoration: none;
+            transition: 0.3s;
         }
 
-        /* Pseudo-clase HOVER (Punto 5 del taller) */
+        /* PSEUDOCLASES (Semana 4: Punto 10) */
         nav ul li a:hover {
             background-color: #e67e22;
             color: #fff;
-            transition: 0.4s;
         }
 
-        /* --- SEMANA 4: SELECTOR DESCENDIENTE (Punto 4 del taller) --- */
-        /* Estilo para una lista que está dentro de una sección específica */
-        section ul li {
-            color: #d35400;
+        /* CONTENEDOR PARA SECTION Y ASIDE (Semana 5: Posición) */
+        .main-container {
+            overflow: hidden; /* Limpia el float */
+            margin-bottom: 15px;
+        }
+
+        /* SECTION: Contenido principal (Semana 5: 70% de ancho) */
+        section {
+            background-color: white;
+            width: 70%;
+            float: left; /* Posicionamiento lateral izquierdo */
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        /* ASIDE: Barra lateral (Semana 5: 28% de ancho) */
+        aside {
+            background-color: #f9f9f9;
+            width: 28%;
+            float: right; /* Posicionamiento lateral derecho */
+            padding: 20px;
+            border: 1px solid #e67e22;
+            border-radius: 10px;
+        }
+
+        /* SELECTOR DESCENDIENTE (Semana 4: Punto 9) */
+        aside ul li {
+            color: #e67e22;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* FOOTER (Semana 5) */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            clear: both; /* Importante para que no se suba con el float */
+            margin-top: 15px;
         }
 
         /* --- SEMANA 3: TABLAS --- */
@@ -81,7 +115,7 @@
 
         th, td {
             border: 1px solid #ddd;
-            padding: 10px;
+            padding: 12px;
             text-align: center;
         }
 
@@ -89,70 +123,70 @@
             background-color: #e67e22;
             color: white;
         }
+
+        /* --- IMÁGENES (Semana 1 y 2) --- */
+        .foto-jacore {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 50%; /* Imagen circular */
+            border: 5px solid #2c3e50;
+            display: block;
+            margin: 20px auto;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1 id="titulo-principal">Mundo Minino</h1>
+        <p>Proyecto de Aula - Sofía</p>
     </header>
 
     <nav>
         <ul>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#cuidados">Cuidados</a></li>
-            <li><a href="#fotos">Fotos</a></li>
             <li><a href="https://es.wikipedia.org/wiki/Felis_catus" target="_blank">Wiki Gatos</a></li>
         </ul>
     </nav>
 
-    <section id="inicio">
-        <article class="destacado">
-            <h2 class="subtitulo-seccion">Bienvenidos</h2>
-            <p>Hola, soy Sofía. En esta página aprenderás todo sobre el cuidado de los gatos, especialmente de mi gato Jacore.</p>
-        </article>
+    <div class="main-container">
+        <section id="inicio">
+            <h2>Bienvenidos al rincón de Jacore</h2>
+            <p>En esta sección principal aplicamos el <strong>Modelo de Caja</strong> con padding interno y bordes definidos[cite: 38].</p>
+            
+            <img src="fotosofi.jpg" alt="Jacore el gato" class="foto-jacore">
 
-        <h3>Temas principales:</h3>
-        <ul>
-            <li>Alimentación balanceada</li>
-            <li>Higiene y salud</li>
-            <li>Juego y diversión</li>
-        </ul>
-    </section>
+            <div id="cuidados">
+                <h3>Horarios de Jacore</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Actividad</th>
+                            <th>Frecuencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Comida</td><td>3 veces</td></tr>
+                        <tr><td>Juego</td><td>Diario</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-    <section id="cuidados">
-        <h2 class="subtitulo-seccion">Rutina Semanal</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Actividad</th>
-                    <th>Día</th>
-                    <th>Prioridad</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Limpiar arenero</td>
-                    <td>Diario</td>
-                    <td>Alta</td>
-                </tr>
-                <tr>
-                    <td>Cepillado</td>
-                    <td>Sábado</td>
-                    <td>Media</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <section id="fotos" style="text-align: center;">
-        <h2 class="subtitulo-seccion">Mi pasión por los felinos</h2>
-        <img src="fotosofi.jpg" alt="Jacore y yo" style="width:100%; max-width:400px; border-radius:10px;">
-        <p><em>"Un gato es un rompecabezas para el cual no existe una sola solución".</em></p>
-    </section>
+        <aside>
+            <h3>Datos Curiosos</h3>
+            <ul>
+                <li>Los gatos duermen 16 horas.</li>
+                <li>Tienen 32 músculos en cada oreja.</li>
+                <li>Jacore es el mejor modelo.</li>
+            </ul>
+        </aside>
+    </div>
 
     <footer>
-        <p style="text-align: center; font-size: 12px;">© 2026 Proyecto de  - STecnología Sofía</p>
+        <p>© 2026 Escuela Skolmi - Taller Semana 5 [cite: 21, 25]</p>
+        <p>Diseñado por Sofía - 10° Grado</p>
     </footer>
 
 </body>
