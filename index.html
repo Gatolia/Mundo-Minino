@@ -5,41 +5,42 @@
     <title>Mundo Minino - Proyecto Final Sofía</title>
     
     <style>
-        /* --- SEMANA 5: MODELO DE CAJA Y RESETEO (Punto 1a) --- */
+        /* --- SEMANA 5: MODELO DE CAJA Y RESETEO (Criterio 1 y 2) --- */
         * {
-            box-sizing: border-box; /* El padding no afecta el ancho total */
+            box-sizing: border-box; /* El padding no aumenta el tamaño total de la caja */
             margin: 0;
             padding: 0;
         }
 
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #fdfaf6; /* Color de fondo suave (Semana 2) */
             padding: 20px;
             line-height: 1.6;
         }
 
-        /* --- SEMANA 5: POSICIONAMIENTO DEL LAYOUT (Boceto) --- */
+        /* --- SEMANA 5: POSICIONAMIENTO DEL LAYOUT (Boceto del Taller) --- */
         
-        /* HEADER (Semana 1 y 5) */
+        /* HEADER: Caja superior (Punto 1.a) */
         header {
             background-color: #2c3e50;
             color: white;
             padding: 30px;
             text-align: center;
-            border-bottom: 5px solid #e67e22;
-            margin-bottom: 15px;
+            border-bottom: 5px solid #e67e22; /* Borde del modelo de caja */
+            margin-bottom: 15px; /* Margen del modelo de caja */
         }
 
         #titulo-principal {
             text-transform: uppercase;
             text-shadow: 2px 2px #000;
-            text-decoration: underline dotted #e67e22; /* Semana 3: Decoración */
+            text-decoration: underline dotted #e67e22;
         }
 
         /* NAV: Menú de Navegación (Semana 3 y 4) */
         nav {
-            background-color: #34495e;
+            background-color: #34495e; /* Color de fondo background */
+            width: 100%; /* Propiedad width solicitada */
             margin-bottom: 15px;
             border-radius: 5px;
         }
@@ -47,6 +48,10 @@
         nav ul {
             list-style: none;
             display: flex; /* Alineación horizontal */
+        }
+
+        nav ul li {
+            float: left; /* Propiedad float solicitada */
         }
 
         nav ul li a {
@@ -57,7 +62,7 @@
             transition: 0.3s;
         }
 
-        /* PSEUDOCLASES (Semana 4: Punto 10) */
+        /* PSEUDOCLASES (Semana 4 y 5: Punto 10) */
         nav ul li a:hover {
             background-color: #e67e22;
             color: #fff;
@@ -65,27 +70,27 @@
 
         /* CONTENEDOR PARA SECTION Y ASIDE (Semana 5: Posición) */
         .main-container {
-            overflow: hidden; /* Limpia el float */
+            overflow: hidden; /* Limpia el float para que el footer no se suba */
             margin-bottom: 15px;
         }
 
-        /* SECTION: Contenido principal (Semana 5: 70% de ancho) */
+        /* SECTION: Contenido principal (Semana 5: Posición al 70%) */
         section {
             background-color: white;
             width: 70%;
             float: left; /* Posicionamiento lateral izquierdo */
-            padding: 25px;
-            border: 1px solid #ddd;
+            padding: 25px; /* Relleno padding */
+            border: 1px solid #ddd; /* Borde border */
             border-radius: 10px;
         }
 
-        /* ASIDE: Barra lateral (Semana 5: 28% de ancho) */
+        /* ASIDE: Barra lateral (Semana 5: Posición al 28%) */
         aside {
             background-color: #f9f9f9;
             width: 28%;
             float: right; /* Posicionamiento lateral derecho */
             padding: 20px;
-            border: 1px solid #e67e22;
+            border-left: 5px solid #e67e22;
             border-radius: 10px;
         }
 
@@ -102,7 +107,7 @@
             color: white;
             text-align: center;
             padding: 20px;
-            clear: both; /* Importante para que no se suba con el float */
+            clear: both; /* Evita que los floats lo tapen */
             margin-top: 15px;
         }
 
@@ -128,7 +133,7 @@
         .foto-jacore {
             width: 100%;
             max-width: 300px;
-            border-radius: 50%; /* Imagen circular */
+            border-radius: 15px;
             border: 5px solid #2c3e50;
             display: block;
             margin: 20px auto;
@@ -153,12 +158,12 @@
     <div class="main-container">
         <section id="inicio">
             <h2>Bienvenidos al rincón de Jacore</h2>
-            <p>En esta sección principal aplicamos el <strong>Modelo de Caja</strong> con padding interno y bordes definidos[cite: 38].</p>
+            <p>Aquí aplicamos el <strong>Modelo de Caja</strong>: esta sección tiene padding para separar el texto del borde y margin para separarse del aside[cite: 29, 49].</p>
             
             <img src="fotosofi.jpg" alt="Jacore el gato" class="foto-jacore">
 
             <div id="cuidados">
-                <h3>Horarios de Jacore</h3>
+                <h3>Rutina de Jacore</h3>
                 <table>
                     <thead>
                         <tr>
@@ -167,19 +172,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Comida</td><td>3 veces</td></tr>
-                        <tr><td>Juego</td><td>Diario</td></tr>
+                        <tr><td>Comida Proplan</td><td>3 veces</td></tr>
+                        <tr><td>Limpieza arenero</td><td>Diario</td></tr>
                     </tbody>
                 </table>
             </div>
         </section>
 
         <aside>
-            <h3>Datos Curiosos</h3>
+            <h3>Datos de Interés</h3>
+            <p>Esta caja usa <strong>float: right</strong> para estar a la derecha[cite: 35].</p>
+            <br>
             <ul>
-                <li>Los gatos duermen 16 horas.</li>
-                <li>Tienen 32 músculos en cada oreja.</li>
-                <li>Jacore es el mejor modelo.</li>
+                <li>Amor por las cajas.</li>
+                <li>32 músculos en orejas.</li>
+                <li>Jacore es un explorador.</li>
             </ul>
         </aside>
     </div>
